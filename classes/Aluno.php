@@ -24,6 +24,18 @@ class Aluno{
 
         return $stmt->execute();
     }
+
+    public function listar(){
+        $sql = "SELECT * FROM {$this->table}";
+        return $this->conn->query($sql);
+    }
+
+    public function excluir($id){
+        $sql = "DELETE FROM {$this->table} WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(":id",$id);
+        return $stmt->execute();
+    }
 }
 
 ?>
