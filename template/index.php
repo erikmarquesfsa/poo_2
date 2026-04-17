@@ -24,6 +24,11 @@ $lista = $aluno->listar();
                 <td><?php echo $row['nome']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['curso']; ?></td>
+                <td>
+                    <a href="../actions/excluir.php?id=<?php echo $row['id']; ?>">
+                        Excluir
+                    </a>
+                </td>
             </tr>
         <?php } ?>
     </table>
