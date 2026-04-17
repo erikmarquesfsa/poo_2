@@ -19,6 +19,13 @@ $lista = $aluno->listar();
             <th>Curso</th>
             <th>Ações</th>
         </tr>
+        <?php foreach ($lista as $row){ ?>
+            <tr>
+                <td><?php echo $row['nome']; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['curso']; ?></td>
+            </tr>
+        <?php } ?>
     </table>
 </body>
 </html>
